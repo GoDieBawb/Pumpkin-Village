@@ -1,0 +1,50 @@
+Proximity:
+  Distance: 5
+  Enter:
+    - if entity.isHid.!
+    - chat "A Scarecrow stands watch over the Graveyard."
+    - else
+    - chat "Never go into the Graveyard during the Pumpkin Festival"
+
+Interact:
+  Script:
+    - if entity.isHid.!
+    - chat "You take the Scarecrow"
+    - equip
+    - remove_scarecrow
+    - hide
+
+    - elseif player.equipped_item#Scarecrow
+    - chat "You place the Scarecrow to watch over the Graveyard."
+    - place_scarecrow
+    - show
+    - drop
+
+    - elseif player.equipped_item#Graveyard
+    - chat "You place the Scarecrow to watch over the Graveyard."
+    - place_scarecrow
+    - show
+    - drop
+
+    - elseif player.equipped_item#House
+    - chat "You place the Scarecrow to watch over the Graveyard."
+    - place_scarecrow
+    - show
+    - drop
+
+    - else
+    - chat "A ghostly presence watches this Graveyard."
+
+Start:
+  Script:
+    - hide
+    - debug "hiding"
+
+Equip:
+  xLoc: 0.0
+  yLoc: 0.0
+  zLoc: 0.0
+  xRot: 0.0
+  yRot: 0.0
+  zRot: 0.0
+  scale: 5.0

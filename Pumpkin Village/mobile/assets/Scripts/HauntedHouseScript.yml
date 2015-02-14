@@ -1,0 +1,50 @@
+Proximity:
+  Distance: 5
+  Enter:
+    - if entity.isHid.!
+    - chat "A Scarecrow stands watch over this House."
+    - else
+    - chat "This house of Pumpkin Von Richenbacher..."
+
+Interact:
+  Script:
+    - if entity.isHid.!
+    - chat "You take the Scarecrow"
+    - equip
+    - remove_scarecrow
+    - hide
+
+    - elseif player.equipped_item#Scarecrow
+    - chat "You place the Scarecrow to watch over the House."
+    - place_scarecrow
+    - show
+    - drop
+
+    - elseif player.equipped_item#Graveyard
+    - chat "You place the Scarecrow to watch over the House."
+    - place_scarecrow
+    - show
+    - drop
+
+    - elseif player.equipped_item#House
+    - chat "You place the Scarecrow to watch over the House."
+    - place_scarecrow
+    - show
+    - drop
+
+    - else
+    - chat "The home of the infamous murderer Baron Von Richenbacher... His crime has earned him the nickname of Pumpkin."
+
+Start:
+  Script:
+    - hide
+    - debug "hiding"
+
+Equip:
+  xLoc: 0.0
+  yLoc: 0.0
+  zLoc: 0.0
+  xRot: 0.0
+  yRot: 0.0
+  zRot: 0.0
+  scale: 5.0

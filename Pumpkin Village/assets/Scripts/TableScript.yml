@@ -1,0 +1,10 @@
+Proximity:
+  Distance: 2
+  Enter:
+    - chat "A table sits against the wall here."
+
+Interact:
+  Script:
+    - chat "Baron Von Richenbachers diary reads... "The Townspeople realize it was me... I hear the pounding on the door. I'll be hung for the murder, no doubt. But the winning first prize in the Pumpkin Festival was worth it.""
+    - if player.inventory.contains#Knowledge.!
+    - give Knowledge

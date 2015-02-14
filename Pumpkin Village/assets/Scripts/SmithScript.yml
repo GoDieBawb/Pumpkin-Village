@@ -1,0 +1,21 @@
+Proximity:
+  Distance: 3
+  Enter:
+    - if player.equipped_item#Pumpkin
+    - chat "Terrified the Smith stares at your pumpkin."
+    - elseif player.equipped_item#Shovel
+    - chat "The Smith sees you with his stolen shovel and kills you immediately."
+    - fail
+    - else
+    - chat "Hello there Stranger"
+
+While:
+  Script:
+    - if entity.inprox
+    - look
+    - end
+    - idle
+
+Interact:
+  Script:
+    - chat "Hello there Stranger! Hope to see you at the Pumpkin Festival Tonight!"

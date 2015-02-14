@@ -1,0 +1,30 @@
+Proximity:
+  Distance: 2
+  Enter:
+    - if entity.isHid
+    - chat "The place on the wall where the shovel once leaned."
+    - else
+    - chat "A shovel leans against the wall here."
+
+Interact:
+  Script:
+    - if entity.isHid
+    - chat "You lean the shovel back against the wall."
+    - drop
+    - show
+    - elseif player.equipped_item#None
+    - chat "You pick up the shovel"
+    - hide
+    - equip
+    - else
+    - chat "You are already holding something"
+
+Equip:
+  xLoc: 0.0
+  yLoc: 0.0
+  zLoc: 0.0
+  xRot: 0.0
+  yRot: 0.0
+  zRot: 0.0
+  scale: 5.0
+    

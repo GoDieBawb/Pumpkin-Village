@@ -1,0 +1,18 @@
+Proximity:
+  Distance: 4
+  Enter:
+    - if player.equipped_item#Pumpkin
+    - chat "As you look around at the horrified looks on the faces of the festival goers and back to your pumpkin. You realize you are standing there with the severed head of a long dead body."
+    - finish
+    - else
+    - chat "Remember to get your Pumpkin entered in time!"
+
+While:
+  Script:
+    - idle
+    - if entity.inprox
+    - look
+
+Interact:
+  Script:
+    - chat "I'll be juding the Pumpkin Festival this year!"

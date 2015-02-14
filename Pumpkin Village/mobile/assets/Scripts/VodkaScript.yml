@@ -1,0 +1,30 @@
+Proximity:
+  Distance: 2
+  Enter:
+    - if entity.isHid
+    - chat "An empty counter where the Vodka once stood."
+    - else
+    - chat "A bottle sits on the counter here"
+
+Interact:
+  Script:
+    - if entity.isHid
+    - elseif player.equipped_item#None
+    - equip
+    - hide
+    - chat "You steal the bottle of Vodka from the counter."
+    - elseif player.equipped_item#Vodka
+    - drop
+    - show
+    - else
+    - chat "You're already holding something"
+
+Equip:
+  xLoc: 0.0
+  yLoc: 0.0
+  zLoc: 0.0
+  xRot: 0.0
+  yRot: 0.0
+  zRot: 0.0
+  scale: 5.0
+      

@@ -1,0 +1,27 @@
+Proximity:
+  Distance: 3
+  Enter:
+    - if player.equipped_item#Pumpkin
+    - chat "The Porter is extremely pale.... Shaking almost as if he's afraid of you."
+
+    - elseif player.equipped_item#Axe
+    - delaychat "The Porter sees you with his stolen Axe and kills you immediately."
+    - fail
+
+    - else
+    - chat "Hello there Stranger"
+
+While:
+  Script:
+    - if entity.inprox
+    - look
+    - end
+    - idle
+
+Interact:
+  Script:
+    - if player.equipped_item#Pumpkin
+    - chat "The Porter is extremely pale.... Shaking almost as if he's afraid of you."
+
+    - else
+    - chat "I forgot tonight was the Pumpkin Festival, I barely escaped Pumpkin Von Richenbacher coming back from the Temple... He always know when someone is in is house..."

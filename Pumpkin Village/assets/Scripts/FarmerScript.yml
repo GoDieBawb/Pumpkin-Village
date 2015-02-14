@@ -1,0 +1,46 @@
+Proximity:
+  Distance: 6
+  Enter:
+    - if player.equipped_item#Pumpkin
+    - chat "The Farmer looks too horrified to speak."
+    - elseif player.inventory.contains#GaveAlcohol && player.equipped_item#Scarecrow
+    - chat "Ha! Look at this guy! He knows how to party!"
+
+    - elseif player.inventory.contains#GaveAlcohol
+    - chat "Thanks for the alcohol friend! It is a party after all!"
+
+    - elseif player.equipped_item#Scarecrow
+    - chat "The Farmer sees you attempting to steal his scarecrow and kills you"
+    - fail
+
+    - elseif player.equipped_item#Vodka
+    - chat "That's a nice bottle of Vodka you have there.."
+
+    - else
+    - chat "Hello there Stranger! Welcome to the Pumpkin Festival!"
+    - end
+
+Interact:
+  Script:
+    - if player.equipped_item#Vodka
+    - chat "A Present For me? Thank you so much! I'll get started on this bottle right away!"
+    - drop
+    - give GaveAlcohol
+    - delaychat "The farmer is now quite drunk."
+
+    - elseif player.equipped_item#Pumpkin
+    - chat "What... what is that in your hand?!"
+
+    - elseif player.inventory.contains#GaveAlcohol
+    - chat "That Vodka was great.... You're my new friend."
+
+    - else
+    - chat "Welcome to the Pumpkin Festival! I sure could use a drink..."
+    
+
+While:
+  Script:
+    - if entity.inprox
+    - look
+    - end
+    - idle

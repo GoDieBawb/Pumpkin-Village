@@ -1,0 +1,29 @@
+Proximity:
+  Distance: 3
+  Enter:
+    - if player.equipped_item#Axe
+    - chat "Two hooks fastened to the wall that once held the axe."
+    - else
+    - chat "An axe hangs on the wall here"
+
+Interact:
+  Script:
+    - if player.equipped_item#Axe
+    - chat "You place the axe back onto the wall"
+    - drop
+    - show
+    - elseif player.equipped_item#None
+    - equip
+    - chat "You take the axe"
+    - hide
+    - else
+    - chat "You're already holding something"
+
+Equip:
+  xLoc: 0.0
+  yLoc: 0.0
+  zLoc: 0.0
+  xRot: 5.0
+  yRot: 5.0
+  zRot: -3.0
+  scale: 5.0

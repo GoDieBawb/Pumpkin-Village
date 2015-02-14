@@ -1,0 +1,33 @@
+Proximity:
+  Distance: 3
+  Enter:
+    - if player.inventory.contains#HasHope
+    - chat "I see you have hope!!"
+    - delaychat "Thanks for giving me the hope back!";
+    - give GaveHope
+    - take HasHope
+
+    - elseif player.inventory.contains#GaveHope
+    - chat "Awesome you have gave hope!"
+
+    - else
+    - chat "You currently don't have any hope!"
+    - end
+
+  Exit:
+    - chat "Good Bye Traveler!"
+
+  While:
+    - look
+
+Interact:
+  Script:
+    - if player.inventory.contains#GaveHope
+    - chat "You've already taken the hope and given it back"
+
+    - elseif player.inventory.contains#HasHope
+    - chat "You already have the hope I gave you!"
+
+    - else
+    - chat "Here is some hope!"
+    - give HasHope

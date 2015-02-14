@@ -1,0 +1,7 @@
+Material Newman Soldier : Common/MatDefs/Misc/Unshaded.j3md {
+     MaterialParameters {
+        ColorMap : Flip Textures/NewManNewSoldier.png
+     }
+    AdditionalRenderState {
+    }
+}

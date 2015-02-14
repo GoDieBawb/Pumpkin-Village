@@ -1,0 +1,26 @@
+Proximity:
+  Distance: 3
+  Enter:
+    - if player.equipped_item#Pumpkin
+    - chat "The InnKeeper looks too horrified to speak."
+
+    - elseif player.equipped_item#Vodka
+    - chat "The InnKeeper sees you with his stolen Vodka and kills you immediately."
+    - fail
+
+    - else
+    - chat "Hello there Stranger"
+
+While:
+  Script:
+    - if entity.inprox
+    - look
+    - end
+    - idle
+
+Interact:
+  Script:
+    - if player.equipped_item#Pumpkin
+    - chat "The InnKeeper looks too horrified to speak."    
+    - else
+    - chat "I'm planning on entering my pumpkin the the festival tonight! Perhaps bribe the Farmer with a drink or two."

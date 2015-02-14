@@ -1,0 +1,21 @@
+C:\Users\Bob\Documents\Pumpkin Village\mobile\gen\com\bigbawb\pumpkinvillage\R.java \
+ : C:\Users\Bob\Documents\Pumpkin Village\mobile\res\drawable-hdpi\icon.png \
+C:\Users\Bob\Documents\Pumpkin Village\mobile\res\drawable-hdpi\splash.png \
+C:\Users\Bob\Documents\Pumpkin Village\mobile\res\drawable-ldpi\icon.png \
+C:\Users\Bob\Documents\Pumpkin Village\mobile\res\drawable-ldpi\splash.png \
+C:\Users\Bob\Documents\Pumpkin Village\mobile\res\drawable-mdpi\icon.png \
+C:\Users\Bob\Documents\Pumpkin Village\mobile\res\drawable-mdpi\splash.png \
+C:\Users\Bob\Documents\Pumpkin Village\mobile\res\drawable-xhdpi\icon.png \
+C:\Users\Bob\Documents\Pumpkin Village\mobile\res\drawable-xhdpi\splash.png \
+C:\Users\Bob\Documents\Pumpkin Village\mobile\res\layout\main.xml \
+C:\Users\Bob\Documents\Pumpkin Village\mobile\res\values\integers.xml \
+C:\Users\Bob\Documents\Pumpkin Village\mobile\res\values\strings.xml \
+C:\Users\Bob\Documents\Pumpkin Village\mobile\bin\res\drawable-hdpi\icon.png \
+C:\Users\Bob\Documents\Pumpkin Village\mobile\bin\res\drawable-hdpi\splash.png \
+C:\Users\Bob\Documents\Pumpkin Village\mobile\bin\res\drawable-ldpi\icon.png \
+C:\Users\Bob\Documents\Pumpkin Village\mobile\bin\res\drawable-ldpi\splash.png \
+C:\Users\Bob\Documents\Pumpkin Village\mobile\bin\res\drawable-mdpi\icon.png \
+C:\Users\Bob\Documents\Pumpkin Village\mobile\bin\res\drawable-mdpi\splash.png \
+C:\Users\Bob\Documents\Pumpkin Village\mobile\bin\res\drawable-xhdpi\icon.png \
+C:\Users\Bob\Documents\Pumpkin Village\mobile\bin\res\drawable-xhdpi\splash.png \
+C:\Users\Bob\Documents\Pumpkin Village\mobile\bin\AndroidManifest.xml \

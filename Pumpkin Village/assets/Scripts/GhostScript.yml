@@ -1,0 +1,23 @@
+Proximity:
+  Distance: 5
+  Enter:
+    - if player.failed.!
+    - chat "The vengeful ghost of Pumpkin Von Rickenbacher seizes you immediately and rips you to pieces."
+    - fail
+While:
+  Script:
+    - if entity#Graveyard.isHid.!
+    - move entity#Temple.location
+
+    - elseif entity#House.isHid.!
+    - move entity#Stairs.location
+
+    - elseif player.north
+    - move entity#Stairs.location
+
+    - elseif player.south
+    - move entity#Temple.location
+    - end
+
+    - look
+    - idle

@@ -1,0 +1,56 @@
+Proximity:
+  Distance: 3
+  Enter:
+    - chat "A Tombstone marking a grave sits here..."
+
+Interact:
+  Script:
+    - if player.equipped_item#Pumpkin
+    - chat "You should bring your pumpkin to the Festival to be Judged!"
+
+    - elseif player.inventory.contains#Removed && player.equipped_item#None
+    - chat "You pick up the pumpkin from the corpse, and the true face of Pumpkin Von Ricenbacker is revealed..."
+    - hide entity.child#Corpse.child#Pumpkin
+    - equip entity.child#Corpse.child#Pumpkin
+
+    - elseif player.inventory.contains#Removed
+    - chat "The pumpkin is too heavy to lift while you're holding something"
+
+    - elseif player.inventory.contains#DeadBody && player.equipped_item#Axe
+    - chat "With great effort you use the Axe you remove the Pumpkin from the corpse."
+    - give Removed
+
+    - elseif player.inventory.contains#DeadBody
+    - chat "A corpse lies exposed here."
+
+    - elseif player.inventory.contains#Knowledge && player.equipped_item#Shovel
+    - chat "You dig up a corpse from beneath the earth."
+    - show entity.child#Corpse
+    - show entity#Pumpkins.child#Pumpkins
+    - move entity#Smith entity#SmithSpot.location
+    - move entity#Porter entity#PorterSpot.location
+    - move entity#InnKeeper entity#InnKeeperSpot.location
+    - give DeadBody
+
+    - elseif player.equipped_item#Shovel
+    - chat "You don't have any reason to go digging up this grave!"
+
+    - elseif player.inventory.contains#Knowledge
+    - chat "Yes... The pumpkin is buried here! In this grave!"
+
+    - else
+    - chat "The Grave of a Long Dead Individual."
+
+Start:
+  Script:
+    - debug "Hiding Corpse"
+    - hide entity.child#Corpse
+
+Equip:
+  xLoc: 0.0
+  yLoc: 0.0
+  zLoc: 0.0
+  xRot: 0.0
+  yRot: 0.0
+  zRot: 0.0
+  scale: 5.0

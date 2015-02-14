@@ -1,0 +1,8 @@
+Material My Material : Common/MatDefs/Misc/Particle.j3md {
+     MaterialParameters {
+        GlowColor : 1.0 0.6 0.2 1.0
+        Texture : 3d_objects/structures/textures/firepit_embers/D.png
+     }
+    AdditionalRenderState {
+    }
+}
