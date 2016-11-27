@@ -6,12 +6,10 @@ package mygame;
 
 import com.jme3.animation.AnimChannel;
 import com.jme3.animation.AnimControl;
-import com.jme3.app.SimpleApplication;
 import com.jme3.app.state.AppStateManager;
 import com.jme3.bullet.control.BetterCharacterControl;
 import com.jme3.math.Vector3f;
 import com.jme3.scene.Node;
-import com.sun.glass.ui.Application;
 import java.util.ArrayList;
 
 /**
@@ -30,7 +28,9 @@ public class Player extends Node {
     private String                 equippedItem;
     public  boolean                hasFailed;
     public  Long                   failTime;
-    private AppStateManager stateManager;
+    private AppStateManager        stateManager;
+    private Node                   itemModel;
+    private Vector3f               itemOffset;
     
     
     public Player(AppStateManager stateManager) {
@@ -51,6 +51,10 @@ public class Player extends Node {
         addControl(phys);
         attachChild(model);
         
+    }
+    
+    public Vector3f getHandPosition() {
+        return animControl.getSkeleton().getBone("Righthand").getModelSpacePosition();
     }
     
     public void fail() {
@@ -74,12 +78,18 @@ public class Player extends Node {
         
     }
     
+    public Vector3f getItemOffset() {
+        return itemOffset;
+    }
+    
     public void equipItem(Node model, Vector3f location, float xRot, float yRot, float zRot, float scale) {
         
-        equippedItem =  model.getName();
+        equippedItem = model.getName();
+        itemModel    = model;
+        itemOffset   = location;
         model.scale(scale);
-        ((Node) this.model.getChild("HandNode")).attachChild(model);
-        model.setLocalTranslation(location);
+        this.model.attachChild(itemModel);
+        model.setLocalTranslation(0,0,0);
         model.rotate(xRot,yRot,zRot);
         
     }
@@ -87,7 +97,11 @@ public class Player extends Node {
     public void dropItem() {
         
         equippedItem = "None";
-        ((Node)model.getChild("HandNode")).detachAllChildren();
+        
+        if (itemModel != null)
+            model.detachChild(itemModel);
+        
+        itemModel    = null;
         
     }
     

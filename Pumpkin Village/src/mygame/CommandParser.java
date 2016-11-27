@@ -119,9 +119,7 @@ public class CommandParser {
                 
                 stateManager.getState(PlayerManager.class).player.fail();
                 
-                stateManager.getState
-                (SceneManager.class).initScene
-                ("Scenes/PumpkinVillage.j3o");
+                stateManager.getState(SceneManager.class).initScene("Scenes/PumpkinVillage.j3o");
                 
                 stateManager.getState
                 (GuiManager.class).delayAlert

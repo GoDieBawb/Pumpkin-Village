@@ -123,17 +123,22 @@ public class GuiManager extends AbstractAppState {
             }
         };
         
-        alert.setMaterial(assetManager.loadMaterial("Materials/Paper.j3m"));
+        alert.setMaterial(stateManager.getApplication().getAssetManager().loadMaterial("Materials/Paper.j3m"));
         alert.getTextArea().getScrollableArea().setFont("Interface/Impact.fnt");
-        alert.getDragBar().setFont("Interface/Impact.fnt");        
+        alert.getDragBar().setFont("Interface/Impact.fnt");
+        alert.getButtonOk().setFont("Interface/Impact.fnt");
+        
+        alert.getTextArea().getScrollableArea().setFontSize(alert.getTextArea().getScrollableArea().getFontSize()-2);
+        
         alert.setWindowTitle("Welcome");
         alert.setMsg("Welcome to Townyville.");
         alert.setButtonOkText("Ok");
         alert.setLockToParentBounds(true);
         alert.setClippingLayer(alert);
-        alert.setMinDimensions(new Vector2f(150,180));
-        //alert.setDimensions(new Vector2f(150,180));
+        //alert.setDimensions(new Vector2f(getScreen().getWidth()/10, getScreen().getHeight()/10));
         alert.setIsResizable(false);
+        alert.getTextArea().getVerticalScrollBar().removeFromParent();
+        alert.getTextArea().getHorizontalScrollBar().removeFromParent();
         screen.addElement(alert);
         alert.hide();
     }

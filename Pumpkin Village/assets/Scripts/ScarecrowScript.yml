@@ -39,7 +39,7 @@ Interact:
 
 Equip:
   xLoc: 0.0
-  yLoc: 0.0
+  yLoc: -3.0
   zLoc: 0.0
   xRot: 0.0
   yRot: 0.0
