@@ -16,16 +16,16 @@ import org.yaml.snakeyaml.Yaml;
  */
 public class ScriptLoader implements AssetLoader {
     
-        public Object load(AssetInfo assetInfo) throws IOException {
-                
-                Yaml yaml = new Yaml();
-            
-                InputStream openStream = assetInfo.openStream();
-                
-                Object obj = yaml.load(openStream);
-               
-                return obj;
-                
-        }    
+    public Object load(AssetInfo assetInfo) throws IOException {
+
+        Yaml yaml = new Yaml();
+
+        InputStream openStream = assetInfo.openStream();
+
+        Object obj = yaml.load(openStream);
+
+        return obj;
+
+    }    
     
 }

@@ -14,16 +14,16 @@ public class Main extends SimpleApplication {
 
     @Override
     public void simpleInitApp() {
-    setShowSettings(false);
-    setDisplayFps(false);
-    setDisplayStatView(false);
-    stateManager.attach(new AudioManager());
-    stateManager.attach(new PlayerManager());
-    stateManager.attach(new InteractionManager());
-    stateManager.attach(new EntityManager());
-    stateManager.attach(new SceneManager());
-    stateManager.attach(new CameraManager());
-    stateManager.attach(new GuiManager());
+        setShowSettings(false);
+        setDisplayFps(false);
+        setDisplayStatView(false);
+        stateManager.attach(new AudioManager());
+        stateManager.attach(new PlayerManager());
+        stateManager.attach(new InteractionManager());
+        stateManager.attach(new EntityManager());
+        stateManager.attach(new SceneManager());
+        stateManager.attach(new CameraManager());
+        stateManager.attach(new GuiManager());
     }
 
     @Override

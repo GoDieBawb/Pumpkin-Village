@@ -15,4 +15,5 @@ While:
 
 Interact:
   Script:
+    - if player.equipped_item#Pumpkin.!
     - chat "I'll be juding the Pumpkin Festival this year!"

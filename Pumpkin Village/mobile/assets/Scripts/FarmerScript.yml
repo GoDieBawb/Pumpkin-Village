@@ -27,8 +27,13 @@ Interact:
     - drop
     - give GaveAlcohol
     - delaychat "The farmer is now quite drunk."
+
+    - elseif player.equipped_item#Pumpkin
+    - chat "What... what is that in your hand?!"
+
     - elseif player.inventory.contains#GaveAlcohol
     - chat "That Vodka was great.... You're my new friend."
+
     - else
     - chat "Welcome to the Pumpkin Festival! I sure could use a drink..."
     
